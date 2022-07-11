@@ -20,8 +20,9 @@
 
 
 	// PROCESS
-	window.user_emailCRIPT = CryptoJS.AES.encrypt(myString, myPassword);
+	window.user_emailCRIPT = (CryptoJS.AES.encrypt(myString, myPassword)).toString();
 	window.decrypted = CryptoJS.AES.decrypt(user_emailCRIPT, myPassword);
+	decrypted.toString(CryptoJS.enc.Utf8);
 	
     </script>
 </head>
