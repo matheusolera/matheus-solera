@@ -12,61 +12,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha256.js"></script>
-<script type="text/javascript" src="https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js"></script>
-<script type="text/javascript">
-
-	function encryptTextWithKey(text, key) {
-		if (!text || !key) return false;
-
-		var textAsBytes = aesjs.utils.utf8.toBytes(text);
-		var aes = new aesjs.AES(getEncryptedKeyBuffer(key));
-		var encryptedBytes = aes.encrypt(aesjs.padding.pkcs7.pad(textAsBytes));
-
-		return aesjs.utils.hex.fromBytes(encryptedBytes);
-	}
-  
-	function getEncryptedKeyBuffer(key) {
-		var key256 = CryptoJS.SHA256(key);
-		var str = key256.toString(CryptoJS.enc.HEX);
-		var bufferArray = [];
-
-		for (var i = 0; i < str.length; i++) {
-			if(i%2 != 0 && i != 0) bufferArray.push(parseInt((str[i-1] + str[i]), 16))
-		}
-
-		return bufferArray.slice(0,16);
-	}
-
-	function decryptHashWithKey(hash, key) {
-		if (!hash || !key) return false;
-
-		var encryptedBytes = aesjs.utils.hex.toBytes(hash);
-		var aes = new aesjs.AES(getEncryptedKeyBuffer(key));
-		var decryptedBytes = aes.decrypt(encryptedBytes);
-		return aesjs.utils.utf8.fromBytes(decryptedBytes);
-	}
-	window.user_emailCRIPT = encryptTextWithKey("teste@teste.com", "meupipinoseupopo");
-	//console.log(encryptTextWithKey("28650149839", "chave"))
-
-</script>
-</head>
-<body>
-    <script>
-    var utag_data = {
-        "page_name" : "homepage",
-        "section" : "intitucional",
-        "siteLanguage" : "pt",
-        "user_email" : user_emailCRIPT
-    }</script>
-    <script type="text/javascript">
-    (function(a,b,c,d){
-    a='https://tags.tiqcdn.com/utag/aunica-training/matheus.solera/prod/utag.js';
-    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
-    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
-    })();
-</script>
+	<script type="text/javascript">
+		import CryptoES from "crypto-es";
+	</script>
+	</head>
+	<body>
+	    <script>
+	    var utag_data = {
+		"page_name" : "homepage",
+		"section" : "intitucional",
+		"siteLanguage" : "pt",
+		"user_email" : user_emailCRIPT
+	    }</script>
+	    <script type="text/javascript">
+	    (function(a,b,c,d){
+	    a='https://tags.tiqcdn.com/utag/aunica-training/matheus.solera/prod/utag.js';
+	    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+	    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+	    })();
+	</script>
 
 </body>
 </html>
