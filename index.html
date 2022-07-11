@@ -21,7 +21,7 @@
 
 	// PROCESS
 	window.user_emailCRIPT = CryptoJS.AES.encrypt(myString, myPassword);
-	window.decrypted = CryptoJS.AES.decrypt(encrypted, myPassword);
+	window.decrypted = CryptoJS.AES.decrypt(user_emailCRIPT, myPassword);
 	
     </script>
 </head>
