@@ -12,8 +12,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
-    <script type="text/javascript">
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+	 <script type="text/javascript">
 
 	var myString   = "matheus.solera@aunica.com";
 	var myPassword = "Azul123";
@@ -24,7 +24,49 @@
 	window.decrypted = CryptoJS.AES.decrypt(user_emailCRIPT, myPassword);
 	decrypted.toString(CryptoJS.enc.Utf8);
 	
-    </script>
+    </script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha256.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js"></script>
+<script type="text/javascript">
+
+	function encryptTextWithKey(text, key) {
+		if (!text || !key) return false;
+
+		var textAsBytes = aesjs.utils.utf8.toBytes(text);
+		var aes = new aesjs.AES(getEncryptedKeyBuffer(key));
+		var encryptedBytes = aes.encrypt(aesjs.padding.pkcs7.pad(textAsBytes));
+
+		return aesjs.utils.hex.fromBytes(encryptedBytes);
+	}
+  
+	function getEncryptedKeyBuffer(key) {
+		var key256 = CryptoJS.SHA256(key);
+		var str = key256.toString(CryptoJS.enc.HEX);
+    console.log("str: ", str);
+		var bufferArray = [];
+
+		for (var i = 0; i < str.length; i++) {
+			if(i%2 != 0 && i != 0) bufferArray.push(parseInt((str[i-1] + str[i]), 16))
+		}
+		console.log("bufferArray: ", bufferArray);
+		return bufferArray.slice(0,17);
+	}
+
+	function decryptHashWithKey(hash, key) {
+		if (!hash || !key) return false;
+
+		var encryptedBytes = aesjs.utils.hex.toBytes(hash);
+		var aes = new aesjs.AES(getEncryptedKeyBuffer(key));
+		var decryptedBytes = aes.decrypt(encryptedBytes);
+		return aesjs.utils.utf8.fromBytes(decryptedBytes);
+	}
+	var x = encryptTextWithKey("1234567891234567", "meupipinoseupopo");
+	document.getElementById('enc').innerHTML = x;
+	document.getElementById('dec').innerHTML = decryptHashWithKey(x, "meupipinoseupopo").replace(//gi,'');
+	//console.log(encryptTextWithKey("28650149839", "chave"))
+
+</script>
 </head>
 <body>
     <script>
@@ -41,6 +83,8 @@
     a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
     })();
 </script>
-	<p id="cripto">Olá Mundo!</p>
+	Encrypt Text With Key:<p id="enc"></p>
+<br>
+Decrypt Hash With Key:<p id="dec"></p>
 </body>
 </html>
