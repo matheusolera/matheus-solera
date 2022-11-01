@@ -25,7 +25,11 @@
 	decrypted.toString(CryptoJS.enc.Utf8);
 	
     </script> -->
-<script src="js/md5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+<script>
+   window.cpf_md5 = CryptoJS.MD5("44697873882");
+</script>
 </head>
 <body>
     <script>
@@ -33,7 +37,7 @@
         "page_name" : "homepage",
         "section" : "intitucional",
         "siteLanguage" : "pt",
-        "user_email" : md5("44697873882")
+        "user_email" : cpf_md5
     }</script>
     <script type="text/javascript">
     (function(a,b,c,d){
