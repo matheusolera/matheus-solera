@@ -1,16 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>	
-	<script>
-	    var azulObject = {
-		"pageName" : "homepage",
-		"section" : "intitucional",
-		"portal" : "voeazul",
-		"siteLanguage" : "pt",
-		"user_email" : "teste@teste.com.br",
-		"user_id" : "5648721523"
-	    }
-	</script>
+<script>
+    var dataLayerObject = {
+    "pageName" : "confirmacao",
+    "section" : "fluxo-compra",
+    "device" : "desktop",
+    "portal" : "voeazul",
+    "visitorLoginStatus" : "true",
+    "transaction" : "true",
+    "siteLanguage" : "pt",
+    "user_id" : "1284cbae9839d94eff9228a8ba9b6ae", 
+    "user_name" : "Teste Teste",
+    "user_email" : "teste@teste.com",
+    "user_mobile" : "5511987654321",
+    "user_tudoAzulNumber" : "654321453",
+    "user_pointsBalance" : "10000",
+    "user_azulCreditsBalance" : "1500.00",
+    "user_userClassification" : "Diamante",
+    "user_clubeTudoAzul_plan" : "Clube-20000",
+    "user_clubeTudoAzul_planType" : "Anual",
+    "user_clubeTudoAzul_status" : "Ativo",
+    "user_clubeTudoAzul_dateAdhesion" : "2022-10-10",
+    "user_clubeTudoAzul_dateLastModified" : "2022-10-10",
+    "user_preAzulCard" : "true",
+    "user_hasAzulCard" : "false",
+    "search_adults" : "2",
+    "search_babies" : "1",
+    "search_children" : "1",
+    "search_resultsQuantity" : "24",
+    "search_paymentType" : "dinheiro",
+    "search_tripType" : "IV",
+    "search_higherPriceMoney_departure" : "3000.00",
+    "search_higherPriceMoney_return" : "2500.00",
+    "search_higherPricePoints_departure" : "45000",
+    "search_higherPricePoints_return" : "48000",
+    "search_lowerPriceMoney_departure" : "2500.00",
+    "search_lowerPriceMoney_return" : "2000.00",
+    "search_lowerPricePoints_departure" : "30000",
+    "search_lowerPricePoints_return" : "25000",
+    "search_method" : "busca-digitada",
+    "search_changeDate" : "false",
+    "search_filter" : "maiores-precos",
+    "search_origin" : "VCP",
+    "search_destination" : "REC",
+    "search_departureDate" : "2023-12-10",
+    "search_returnDate" : "2023-12-20",
+    "product_id" :                ["VCP_REC"              , "VCP_REC"             , "REC_VCP"           , "REC_VCP"             , "BGR1"                , "BGR1"               , "EAF1"                 , "EAF1"                , "EAF1"                 , "EAF1"                ],
+    "product_name" :              ["VCP_REC"              , "VCP_REC"             , "REC_VCP"           , "REC_VCP"             , "Bagagem Extra"       , "Bagagem Extra"      , "Espaço Azul"          , "Espaço Azul"         , "Espaço Azul"          , "Espaço Azul"         ],
+    "product_quantity" :          ["2"                    , "1"                   , "2"                 , "1"                   , "2"                   , "4"                  , "2"                    , "1"                   , "2"                    , "1"                   ],
+    "product_price" :             ["2000.00"              , "500.00"              , "1500.00"           , "500.00"              , "280.00"              , "0.00"               , "70.00"                , "35.00"               , "70.00"                , "35.00"               ],
+    "product_points":             ["0"                    , "0"                   , "0"                 , "0"                   , "0"                   , "0"                  , "0"                    , "0"                   , "0"                    , "0"                   ],
+    "product_category" :          ["Trecho 1"             , "Trecho 1"            , "Trecho 2"          , "Trecho 2"            , "Receita Auxiliar"    , "Receita Auxiliar"   , "Receita Auxiliar"     , "Receita Auxiliar"    , "Receita Auxiliar"     , "Receita Auxiliar"    ],
+    "product_tarif":              ["Mais Azul"            , "Mais Azul"           , "Mais Azul"         , "Mais Azul"           , "Mais Azul"           , "Mais Azul"          , "Mais Azul"            , "Mais Azul"           , "Mais Azul"            , "Mais Azul"           ],
+    "product_variant":            [""                     , ""                    , ""                  , ""                    , "Pago pelo passageiro", "Cortesia da Tarifa" , "Pago pelo passageiro" , "Pago pelo passageiro", "Pago pelo passageiro" , "Pago pelo passageiro"],
+    "product_passengerType" :     ["Adulto"               , "Criança"             , "Adulto"            , "Criança"             , "Adulto"              , "Adulto"             , "Adulto"               , "Criança"             , "Adulto"               , "Criança"             ],
+    "product_departureDate":      ["2023-12-10"           , "2023-12-10"          , "2023-12-20"        , "2023-12-20"          , "2023-12-10"          , "2023-12-20"         , "2023-12-10"           , "2023-12-10"          , "2023-12-20"           , "2023-12-20"          ],
+    "product_departureTime":      ["06:00"                , "06:00"               , "07:00"             , "07:00"               , "06:00"               , "07:00"              , "06:00"                , "06:00"               , "07:00"                , "07:00"               ],
+    //"product_returnDate":       ["2023-06-20"           , "2023-12-20"          , "2023-12-20"        , "2023-12-20"          , "2023-12-20"          , "2023-12-20"         , "2023-12-20"           , "2023-12-20"          , "2023-12-20"           , "2023-12-20"          ],
+    //"product_returnTime":       ["15:00"                , "15:00"               , "15:00"             , "15:00"               , "15:00"               , "15:00"              , "15:00"                , "15:00"               , "15:00"                , "15:00"               ],
+    "product_travelDuration":     ["10"                   , "10"                  , "10"                , "10"                  , "10"                  , "10"                 , "10"                   , "10"                  , "10"                   , "10"                  ],
+    "product_daysUltilDeparture": ["45"                   , "45"                  , "55"                , "55"                  , "45"                  , "55"                 , "45"                   , "45"                  , "55"                   , "55"                  ],
+    "product_logistic":           ["Domestico"            , "Domestico"           , "Domestico"         , "Domestico"           , "Domestico"           , "Domestico"          , "Domestico"            , "Domestico"           , "Domestico"            , "Domestico"           ],
+    "product_completeJourney":    ["VCP_REC|REC_VCP"      , "VCP_REC|REC_VCP"     , "VCP_REC|REC_VCP"   , "VCP_REC|REC_VCP"     , "VCP_REC|REC_VCP"     , "VCP_REC|REC_VCP"    , "VCP_REC|REC_VCP"      , "VCP_REC|REC_VCP"     , "VCP_REC|REC_VCP"      , "VCP_REC|REC_VCP"     ],
+    "product_journeyStopOver":    ["1-Direto"             , "1-Direto"            , "1-Direto"          , "1-Direto"            , "1-Direto"            , "1-Direto"           , "1-Direto"             , "1-Direto"            , "1-Direto"             , "1-Direto"            ],
+    "product_taxesName":          ["Taxa de Embarque"     , "Taxa de Embarque"    , "Taxa de Embarque"  , "Taxa de Embarque"    , ""                    , ""                   , ""                     , ""                    , ""                     , ""                    ],
+    "product_taxesPrice":         ["38.50"                , "38.50"               , "38.50"             , "38.50"               , ""                    , ""                   , ""                     , ""                    , ""                     , ""                    ],
+    "product_tripType":           ["Ida"                  , "Ida"                 , "Volta"             , "Volta"               , "Ida"                 , "Volta"              , "Ida"                  , "Ida"                 , "Volta"                , "Volta"               ],
+    //"product_flightDetail":     ["Direto"               , "Direto"              , "Direto"            , "Direto"              , "Direto"              , "Direto"             , "Direto"               , "Direto"              , "Direto"               , "Direto"              ],
+    "product_flightNumber":       ["A67B98"               , "A67B98"              , "A67B95"            , "A67B95"              , "A67B98"              , "A67B95"             , "A67B98"               , "A67B98"              , "A67B95"               , "A67B95"              ],
+    "product_flightDuration":     ["1:30"                 , "1:30"                , "1:45"              , "1:45"                , "1:30"                , "1:45"               , "1:30"                 , "1:30"                , "1:45"                 , "1:45"                ],
+    "passenger_age" : "24",
+    "passenger_birthdayDate" : "1999-06-21",
+    "passenger_gender" : "m",
+    "passenger_name" : "Teste Teste",
+    "passenger_type" : "Adulto",
+    "passenger_aloneChildren" : "false",
+    "passenger_documentType" : "CPF",
+    "passenger_loyaltyPrograms" : ["TudoAzul"],
+    "customer_city" : "São Paulo",
+    "customer_country" : "Brasil",
+    "customer_state" : "SP",
+    "customer_email" : "teste@teste.com",
+    "customer_name" : "Teste Teste",
+    "customer_mobile" : "5511987654321",
+    "customer_id" : "1284cbae9839d94eff9228a8ba9b6ae",
+    "payment_installmentsQuantity" : "3",
+    "payment_taxName" : "Taxa de Embarque_Taxas Adicionais"  ,  
+    "payment_taxValue": "160.00",                
+    "payment_method" : "VI",
+    "payment_id" : "1234567",
+    "payment_pointsSpent" : "0",
+    "payment_revenue" : "5000.00",
+    "payment_discountName" : "voucher1_itaucard",
+    "payment_discountPoints" : "0",
+    "payment_discountValue" : "150.00",
+    "payment_status" : "Confirmed",
+    "payment_description" : "Pagamento confirmado",
+    "payment_usedRegisteredCC" : "false",
+    "payment_TACrdOrdered" : "nao-solicitado",
+    "payment_cardType" : "gold",
+    "payment_oneClickBuy" : "false",
+    "booking_currency" : "BRL",
+    "booking_pnr" : "ABC123",
+    "booking_status" : "Confirmed"
+}
+</script>
 	<!-- Adobe Launch  -->
 	<!-- <script src="https://assets.adobedtm.com/240316583c27/c64a06619d3c/launch-51442b349fc0-development.min.js" async></script> -->
 	<!-- End Adobe Launch  -->
@@ -43,18 +138,18 @@
 	window.decrypted = CryptoJS.AES.decrypt(user_emailCRIPT, myPassword);
 	decrypted.toString(CryptoJS.enc.Utf8);
 	
-    </script> -->
+    </script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
 <script>
    window.cpf_md5 = CryptoJS.MD5("44697873882");
-</script>
+</script>-->
 </head>
 <body>
 	<!-- Tealium iQ  -->
     	<script type="text/javascript">
 	    (function(a,b,c,d){
-	    a='https://tags.tiqcdn.com/utag/azul/main/qa/utag.js';
+	    a='https://tags.tiqcdn.com/utag/azul/main/dev/utag.js';
 	    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
 	    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 	    })();
