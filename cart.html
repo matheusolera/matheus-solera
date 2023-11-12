@@ -35,7 +35,7 @@
 	"product_size" : ["Normal", "42"]
 }
 		</script>
-	<script src="https://assets.adobedtm.com/240316583c27/3609f6b9b272/launch-3e673b3d713d-development.min.js" async></script>
+	<script src="https://assets.adobedtm.com/240316583c27/3609f6b9b272/launch-3e673b3d713d-development.min.js"></script>
 	</head>
 	
 	<body>
@@ -123,7 +123,7 @@
                               </div>
                               <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                               <div class="input-group-append">
-                                <button class="btn btn-outline-black increase" type="button">&plus;</button>
+                                <button class="btn btn-outline-black increase" type="button" onclick="addToCart(){_satellite.track('addToCart', digitalData);}">&plus;</button>
                               </div>
                             </div>
         
@@ -147,7 +147,7 @@
                               </div>
                               <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                               <div class="input-group-append">
-                                <button class="btn btn-outline-black increase" type="button">&plus;</button>
+                                <button class="btn btn-outline-black increase" type="button" onclick="addToCart(){_satellite.track('addToCart', digitalData);}">&plus;</button>
                               </div>
                             </div>
         
@@ -331,6 +331,7 @@
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
+		<script type="text/javascript">_satellite.pageBottom();</script>
 		<script>_satellite.track("pageView", digitalData);</script>
 	</body>
 
