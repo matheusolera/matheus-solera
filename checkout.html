@@ -478,7 +478,11 @@
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
-		<script>utag.view(utag_data);</script>
+		<script>
+			setTimeout(() => {
+				utag.view(utag_data);
+			}, "2000");
+		</script>
 	</body>
 
 </html>
