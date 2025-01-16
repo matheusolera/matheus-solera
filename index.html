@@ -559,7 +559,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
 		<script type="text/javascript">_satellite.pageBottom();</script>
-		<script>_satellite.track("pageView", digitalData);</script>
+		<script>
+			setTimeout(() => {
+				_satellite.track("pageView", digitalData);
+			}, "2000");
+		</script>
 	</body>
 
 </html>
